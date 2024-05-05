@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metric/Imperial Unit Converter</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body class="change-theme">
+    <main class="app change-theme">
+        <section class="section section--darker container container--column change-theme">
+            <div id="change-theme" class="container container--align-self">
+                <input type='checkbox' id="theme" class="app__checkbox">
+                <label id="theme-label" for="theme" class="app__theme-label height cursor-pointer  change-theme"></label>
+            </div>
+            <h1 class="app__heading change-theme"><span class="app__span">Metric/Imperial</span> Unit Converter</h1>
+            <div class="container container--column container--gap">
+                <input type="text" maxlength="12" id="input-text" class="app__input change-theme">
+                <div class="container container--gap">
+                    <div class="container">
+                        <input type="checkbox" id="input-length" class="app__checkbox set-quantity" data-qty="length">
+                        <label for="input-length" class="app__label">Length</label>
+                    </div>
+                    <div class="container">
+                        <input type="checkbox" id="input-volume" class="app__checkbox set-quantity" data-qty="volume">
+                        <label for="input-volume" class="app__label">Volume</label>
+                    </div>
+                    <div class="container">
+                        <input type="checkbox" id="input-mass" class="app__checkbox set-quantity" data-qty="mass">
+                        <label for="input-mass" class="app__label">Mass</label>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="container">
+                        <input type="radio" id="input-metric" class="app__checkbox">
+                        <label for="input-metric" class="app__label app__label--wide">Metric =>
+                            Imperial</label>
+                    </div>
+                    <div class="container">
+                        <input type="radio" id="input-imperial" class="app__checkbox">
+                        <label for="input-imperial" class="app__label app__label--wide">Imperial =>
+                            Metric</label>
+                    </div>
+                </div>
+                <button id="convert-btn" class="app__btn">Convert</button>
+                <p id="error-msg" class="app__error">Error message</p>
+            </div>
+        </section>
+        <section class="section container container--column container--gap">
+            <div class="output change-theme" data-qty="length">
+                <h2 class="output__quantity">Length</h2>
+                <p id="output-length" class="output__result change-theme"></p>
+            </div>
+            <div class="output change-theme" data-qty="volume">
+                <h2 class="output__quantity">Volume</h2>
+                <p id="output-volume" class="output__result change-theme"></p>
+            </div>
+            <div class="output change-theme" data-qty="mass">
+                <h2 class="output__quantity">Mass</h2>
+                <p id="output-mass" class="output__result change-theme"></p>
+            </div>
+        </section>
+    </main>
+    <script src="/js/theme-icons.js""></script>
+    <script src="/js/index.js"></script>
+</body>
+
+</html>
